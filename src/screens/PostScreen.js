@@ -9,6 +9,14 @@ const PostScreen = () => {
     );
 };
 
+PostScreen.navigationOptions = {
+    headerTitle: 'Post #45',
+    // headerStyle: {
+    //     backgroundColor: 'red',
+    // },
+    // headerTintColor: '#fff',
+};
+
 const styles = StyleSheet.create({
     center: {
         flex: 1,
