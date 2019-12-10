@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be64fba-6911-4821-8e0e-d13f1de8deae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AppHeaderIcon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/AppNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/AppNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/MainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MainScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/PostScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PostScreen.js" afterDir="false" />
     </list>
@@ -97,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575815746762</updated>
-      <workItem from="1575815749192" duration="7961000" />
+      <workItem from="1575815749192" duration="12036000" />
     </task>
     <servers />
   </component>

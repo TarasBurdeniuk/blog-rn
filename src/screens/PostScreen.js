@@ -1,27 +1,60 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Image, Text, Button, ScrollView, Alert } from 'react-native';
+import DATA from '../data';
+import THEME from '../theme';
 
-const PostScreen = () => {
+const PostScreen = ({ navigation }) => {
+    const postId = navigation.getParam('postId');
+
+    const post = DATA.find(p => p.id === postId);
+
+    const removeHandler = () => {
+        Alert.alert(
+            'Removing post',
+            'Are you sure?',
+            [
+                {
+                    text: 'Cancel',
+                    style: 'cancel',
+                },
+                {
+                    text: 'REMOVE',
+                    style: 'destructive',
+                    onPress: () => {},
+                },
+            ],
+            { cancelable: false },
+        );
+    };
+
     return (
-        <View style={styles.center}>
-            <Text>post screen</Text>
-        </View>
+        <ScrollView>
+            <Image source={{ uri: post.img }} style={styles.image} />
+            <View style={styles.textWrap}>
+                <Text style={styles.title}>{post.text}</Text>
+            </View>
+            <Button title="Remove" color={THEME.DANGER_COLOR} onPress={removeHandler} />
+        </ScrollView>
     );
 };
 
-PostScreen.navigationOptions = {
-    headerTitle: 'Post #45',
-    // headerStyle: {
-    //     backgroundColor: 'red',
-    // },
-    // headerTintColor: '#fff',
+PostScreen.navigationOptions = ({ navigation }) => {
+    const date = navigation.getParam('date');
+    return {
+        headerTitle: `Post from ${new Date(date).toLocaleDateString()}`,
+    };
 };
 
 const styles = StyleSheet.create({
-    center: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+    image: {
+        width: '100%',
+        height: 200,
+    },
+    textWrap: {
+        padding: 10,
+    },
+    title: {
+        fontFamily: 'open-regular',
     },
 });
 
