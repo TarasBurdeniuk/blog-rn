@@ -1,13 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import { Ionicons } from '@expo/vector-icons';
 import DATA from '../data';
 import Post from '../components/Post';
-import AppHeaderIcon from '../components/AppHeaderIcon';
 
 const MainScreen = ({ navigation }) => {
     const onPostHandler = post => {
-        navigation.navigate('Post', { postId: post.id, date: post.date });
+        navigation.navigate('Post', { postId: post.id, date: post.date, booked: post.booked });
     };
 
     return (
@@ -25,15 +24,15 @@ const MainScreen = ({ navigation }) => {
 
 MainScreen.navigationOptions = {
     headerTitle: 'My blog',
-    headerRight: (
-        <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
-            <Item title="Take Photo" iconName="ios-camera" onPress={() => console.log('press')} />
-        </HeaderButtons>
-    ),
+    headerRight: <Ionicons style={{ padding: 10 }} name="ios-camera" size={24} color="#fff" />,
+    headerLeft: <Ionicons style={{ padding: 10 }} name="ios-menu" size={24} color="#fff" />,
 };
 
 const styles = StyleSheet.create({
     wrapper: {
+        padding: 10,
+    },
+    icon: {
         padding: 10,
     },
 });

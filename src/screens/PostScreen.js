@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text, Button, ScrollView, Alert } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import DATA from '../data';
 import THEME from '../theme';
 
@@ -40,8 +41,12 @@ const PostScreen = ({ navigation }) => {
 
 PostScreen.navigationOptions = ({ navigation }) => {
     const date = navigation.getParam('date');
+    const booked = navigation.getParam('booked');
+    const icon = booked ? 'ios-star' : 'ios-star-outline';
+
     return {
         headerTitle: `Post from ${new Date(date).toLocaleDateString()}`,
+        headerRight: <Ionicons style={{ padding: 10 }} name={icon} size={24} color="#fff" />,
     };
 };
 
