@@ -1,20 +1,19 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import DATA from '../data';
+import PostList from '../components/PostList';
 
-const BookmarkedScreen = () => {
-    return (
-        <View style={styles.center}>
-            <Text>bookmarked screen</Text>
-        </View>
-    );
+const BookmarkedScreen = ({ navigation }) => {
+    const onPostHandler = post => {
+        navigation.navigate('Post', { postId: post.id, date: post.date, booked: post.booked });
+    };
+
+    return <PostList data={DATA.filter(post => post.booked)} onOpen={onPostHandler} />;
 };
 
-const styles = StyleSheet.create({
-    center: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
+BookmarkedScreen.navigationOptions = {
+    headerTitle: 'My blog',
+    headerLeft: <Ionicons style={{ padding: 10 }} name="ios-menu" size={24} color="#fff" />,
+};
 
 export default BookmarkedScreen;
