@@ -11,10 +11,26 @@ const MainScreen = ({ navigation }) => {
     return <PostList data={DATA} onOpen={onPostHandler} />;
 };
 
-MainScreen.navigationOptions = {
+MainScreen.navigationOptions = ({ navigation }) => ({
     headerTitle: 'My blog',
-    headerRight: <Ionicons style={{ padding: 10 }} name="ios-camera" size={24} color="#fff" />,
-    headerLeft: <Ionicons style={{ padding: 10 }} name="ios-menu" size={24} color="#fff" />,
-};
+    headerRight: (
+        <Ionicons
+            style={{ padding: 10 }}
+            name="ios-camera"
+            size={24}
+            color="#fff"
+            onPress={() => navigation.push('Create')}
+        />
+    ),
+    headerLeft: (
+        <Ionicons
+            style={{ padding: 10 }}
+            name="ios-menu"
+            size={24}
+            color="#fff"
+            onPress={() => navigation.toggleDrawer()}
+        />
+    ),
+});
 
 export default MainScreen;

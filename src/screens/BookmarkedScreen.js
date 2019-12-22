@@ -11,9 +11,17 @@ const BookmarkedScreen = ({ navigation }) => {
     return <PostList data={DATA.filter(post => post.booked)} onOpen={onPostHandler} />;
 };
 
-BookmarkedScreen.navigationOptions = {
+BookmarkedScreen.navigationOptions = ({ navigation }) => ({
     headerTitle: 'My blog',
-    headerLeft: <Ionicons style={{ padding: 10 }} name="ios-menu" size={24} color="#fff" />,
-};
+    headerLeft: (
+        <Ionicons
+            style={{ padding: 10 }}
+            name="ios-menu"
+            size={24}
+            color="#fff"
+            onPress={() => navigation.toggleDrawer()}
+        />
+    ),
+});
 
 export default BookmarkedScreen;

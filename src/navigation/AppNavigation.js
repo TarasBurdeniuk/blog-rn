@@ -3,12 +3,15 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 import { Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import MainScreen from '../screens/MainScreen';
 import PostScreen from '../screens/PostScreen';
 import THEME from '../theme';
 import BookmarkedScreen from '../screens/BookmarkedScreen';
+import AboutScreen from '../screens/AboutScreen';
+import CreateScreen from '../screens/CreateScreen';
 
 const navigatorOptions = {
     defaultNavigationOptions: {
@@ -69,6 +72,52 @@ const BottomNavigator =
               },
           });
 
-const AppNavigation = createAppContainer(BottomNavigator);
+const AboutNavigator = createStackNavigator(
+    {
+        About: AboutScreen,
+    },
+    navigatorOptions,
+);
+
+const CreateNavigator = createStackNavigator(
+    {
+        Create: CreateScreen,
+    },
+    navigatorOptions,
+);
+
+const MainNavigator = createDrawerNavigator(
+    {
+        PostTabs: {
+            screen: BottomNavigator,
+            navigationOptions: {
+                drawerLabel: 'Main',
+                // drawerIcon: <Ionicons name="ios-star" />,
+            },
+        },
+        About: {
+            screen: AboutNavigator,
+            navigationOptions: {
+                drawerLabel: 'About App',
+            },
+        },
+        Create: {
+            screen: CreateNavigator,
+            navigationOptions: {
+                drawerLabel: 'Create post',
+            },
+        },
+    },
+    {
+        contentOptions: {
+            activeTintColor: THEME.MAIN_COLOR,
+            labelStyle: {
+                fontFamily: 'open-bold',
+            },
+        },
+    },
+);
+
+const AppNavigation = createAppContainer(MainNavigator);
 
 export default AppNavigation;
