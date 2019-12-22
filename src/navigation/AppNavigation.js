@@ -10,7 +10,7 @@ import PostScreen from '../screens/PostScreen';
 import THEME from '../theme';
 import BookmarkedScreen from '../screens/BookmarkedScreen';
 
-const navogatorOptions = {
+const navigatorOptions = {
     defaultNavigationOptions: {
         headerStyle: {
             backgroundColor: Platform.OS === 'android' ? THEME.MAIN_COLOR : '#fff',
@@ -24,7 +24,7 @@ const PostNavigator = createStackNavigator(
         Main: MainScreen,
         Post: PostScreen,
     },
-    navogatorOptions,
+    navigatorOptions,
 );
 
 const BookedNavigator = createStackNavigator(
@@ -32,7 +32,7 @@ const BookedNavigator = createStackNavigator(
         Booked: BookmarkedScreen,
         Post: PostScreen,
     },
-    navogatorOptions,
+    navigatorOptions,
 );
 
 const bottomTabsConfig = {
