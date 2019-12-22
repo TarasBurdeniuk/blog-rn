@@ -1,6 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
-import DATA from '../data';
 import PostList from '../components/PostList';
 
 const BookmarkedScreen = ({ navigation }) => {
@@ -8,7 +8,9 @@ const BookmarkedScreen = ({ navigation }) => {
         navigation.navigate('Post', { postId: post.id, date: post.date, booked: post.booked });
     };
 
-    return <PostList data={DATA.filter(post => post.booked)} onOpen={onPostHandler} />;
+    const bookedPosts = useSelector(state => state.post.bookedPosts);
+
+    return <PostList data={bookedPosts} onOpen={onPostHandler} />;
 };
 
 BookmarkedScreen.navigationOptions = ({ navigation }) => ({

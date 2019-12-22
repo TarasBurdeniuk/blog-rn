@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
-import DATA from '../data';
 import PostList from '../components/PostList';
+import { loadPosts } from '../store/actions/post';
 
 const MainScreen = ({ navigation }) => {
     const onPostHandler = post => {
         navigation.navigate('Post', { postId: post.id, date: post.date, booked: post.booked });
     };
 
-    return <PostList data={DATA} onOpen={onPostHandler} />;
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(loadPosts());
+    }, [dispatch]);
+
+    const allPost = useSelector(state => state.post.allPosts);
+
+    return <PostList data={allPost} onOpen={onPostHandler} />;
 };
 
 MainScreen.navigationOptions = ({ navigation }) => ({
