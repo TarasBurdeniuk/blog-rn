@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be64fba-6911-4821-8e0e-d13f1de8deae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/actions/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/BookmarkedScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/BookmarkedScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/MainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MainScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/PostScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PostScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="485" />
+    <option name="y" value="50" />
+    <option name="width" value="1260" />
+    <option name="height" value="706" />
+  </component>
   <component name="ProjectId" id="1UhjVmlb46iSZmun3B6YnsfU2vr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,7 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -56,7 +58,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -79,11 +81,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.android" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -108,7 +105,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575815746762</updated>
       <workItem from="1575815749192" duration="12870000" />
-      <workItem from="1576091936477" duration="14176000" />
+      <workItem from="1576091936477" duration="15646000" />
+      <workItem from="1577348200842" duration="27000" />
+      <workItem from="1577348300578" duration="1248000" />
+      <workItem from="1577650907834" duration="758000" />
+      <workItem from="1577728942415" duration="946000" />
+      <workItem from="1577806270475" duration="194000" />
     </task>
     <servers />
   </component>
@@ -127,8 +129,33 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="328" y="141" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577348220141">
+      <screen x="0" y="22" width="1280" height="746" />
+    </state>
+    <state x="328" y="141" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.22.1280.746@0.22.1280.746" timestamp="1577348220140" />
+    <state x="239" y="52" key="SettingsEditor" timestamp="1577656608123">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="171" y="37" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1577474592720" />
+    <state x="239" y="52" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1577656608123" />
   </component>
 </project>
