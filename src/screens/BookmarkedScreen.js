@@ -20,7 +20,7 @@ BookmarkedScreen.navigationOptions = ({ navigation }) => ({
             style={{ padding: 10 }}
             name="ios-menu"
             size={24}
-            color="#fff"
+            color="#000"
             onPress={() => navigation.toggleDrawer()}
         />
     ),

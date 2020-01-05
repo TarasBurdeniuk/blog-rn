@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be64fba-6911-4821-8e0e-d13f1de8deae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/AboutScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/AboutScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/BookmarkedScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/BookmarkedScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/CreateScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/CreateScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/MainScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/MainScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,9 @@
       <workItem from="1577650907834" duration="758000" />
       <workItem from="1577728942415" duration="946000" />
       <workItem from="1577806270475" duration="194000" />
-      <workItem from="1578146720771" duration="421000" />
+      <workItem from="1578146720771" duration="792000" />
+      <workItem from="1578169185585" duration="125000" />
+      <workItem from="1578169407473" duration="2694000" />
     </task>
     <servers />
   </component>
