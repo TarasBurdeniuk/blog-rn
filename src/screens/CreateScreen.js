@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
     View,
     StyleSheet,
     Text,
     TextInput,
     Button,
-    Image,
     ScrollView,
     TouchableWithoutFeedback,
     Keyboard,
@@ -14,25 +13,28 @@ import { useDispatch } from 'react-redux';
 import { Ionicons } from '@expo/vector-icons';
 import THEME from '../theme';
 import { addPost } from '../store/actions/post';
+import PhotoPicker from '../components/PhotoPicker';
 
 const CreateScreen = ({ navigation }) => {
     const [text, setText] = useState('');
+    const imgRef = useRef();
 
     const dispatch = useDispatch();
-
-    const img =
-        'https://www.catster.com/wp-content/uploads/2018/07/Savannah-cat-long-body-shot.jpg';
 
     const saveHandler = () => {
         const post = {
             date: new Date().toJSON(),
             text,
-            img,
+            img: imgRef.current,
             booked: false,
         };
 
         dispatch(addPost(post));
         navigation.navigate('Main');
+    };
+
+    const photoPickHandler = uri => {
+        imgRef.current = uri;
     };
 
     return (
@@ -47,13 +49,13 @@ const CreateScreen = ({ navigation }) => {
                         onChangeText={setText}
                         multiline
                     />
-                    <Image
-                        style={{ width: '100%', height: 200 }}
-                        source={{
-                            uri: img,
-                        }}
+                    <PhotoPicker onPick={photoPickHandler} />
+                    <Button
+                        title="Create post"
+                        color={THEME.MAIN_COLOR}
+                        onPress={saveHandler}
+                        disabled={!text}
                     />
-                    <Button title="Create post" color={THEME.MAIN_COLOR} onPress={saveHandler} />
                 </View>
             </TouchableWithoutFeedback>
         </ScrollView>
