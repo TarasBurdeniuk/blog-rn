@@ -1,20 +1,19 @@
 {
     "expo": {
-        "name": "Blog application",
+        "name": "Blog App",
         "slug": "blog-app",
         "privacy": "public",
         "sdkVersion": "35.0.0",
         "platforms": [
             "ios",
-            "android",
-            "web"
+            "android"
         ],
         "version": "1.0.0",
         "orientation": "portrait",
         "icon": "./assets/icon.png",
         "splash": {
             "image": "./assets/splash.png",
-            "resizeMode": "contain",
+            "resizeMode": "cover",
             "backgroundColor": "#ffffff"
         },
         "updates": {
@@ -24,7 +23,14 @@
             "**/*"
         ],
         "ios": {
-            "supportsTablet": true
+            "supportsTablet": true,
+            "bundleIdentifier": "com.tarasburdeniuk.blog-app-rn",
+            "buildNumber": "1.0.0"
+        },
+        "android": {
+            "package": "com.tarasburdeniuk.blog_app_rn",
+            "versionCode": 1,
+            "permissions": ["CAMERA", "WRITE_EXTERNAL_STORAGE"]
         }
     }
 }
