@@ -3,6 +3,7 @@ import { LOAD_POSTS, REMOVE_POST, TOGGLE_BOOKED, ADD_POST } from '../types';
 const initialState = {
     allPosts: [],
     bookedPosts: [],
+    loading: true,
 };
 
 const postReducer = (state = initialState, action) => {
@@ -12,6 +13,7 @@ const postReducer = (state = initialState, action) => {
                 ...state,
                 allPosts: action.payload,
                 bookedPosts: action.payload.filter(item => item.booked),
+                loading: false,
             };
         case TOGGLE_BOOKED:
             // eslint-disable-next-line no-case-declarations
